@@ -14,9 +14,9 @@
 public class Ooze extends Creature
 {
     // instance variables - replace the example below with your own
-    private static final int MAX_OOZE_HP = 30;
-    private static final int MIN_OOZE_HP = 10;
-    private static final int MAX_OOZE_STR = 18;
+    private static final int MAX_OOZE_HP = 25;
+    private static final int MIN_OOZE_HP = 5;
+    private static final int MAX_OOZE_STR = 20;
     private static final int MIN_OOZE_STR = 5;
 
     /**
