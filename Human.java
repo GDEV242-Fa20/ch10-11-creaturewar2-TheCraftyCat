@@ -7,6 +7,8 @@
  * Implements a maximum/minimum hitpoint total for the creature type [25/5]
  * CORRECTION: [30/10] listed in project assignment
  * 
+ * A Human is a basic creature (not significant now; may be used later)
+ * 
  * @author Catherine Oldfield
  * from code originally written by W. Crosbie, RVCC GDEV242
  * @version 2020-10 v1.0
@@ -26,7 +28,7 @@ public class Human extends Creature
      * requirements of human minimum and maximum values
      * 
      * The instantiating class asks for a Human and the human class is responsible for
-     * return a Human object with values in the appropriate range
+     * returning a Human object with values in the appropriate range
      * 
      */
     public Human()
@@ -43,9 +45,8 @@ public class Human extends Creature
           
     }
     
-    
     // attack() - not overridden because Humans generate basic damage
-    // takeDamage(int) - not overridden, because Humans take all damage assigned to them
-
+    
+    // takeDamage(int) - not overridden, because a Human takes all damage assigned to it
     
 }

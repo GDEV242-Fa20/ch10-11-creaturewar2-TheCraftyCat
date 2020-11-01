@@ -5,6 +5,8 @@
  * Implements a maximum/minimum strength for the creature type [18/5]
  * Implements a maximum/minimum hitpoint total for the creature type [25/8]
  * 
+ * An Elf is a magical creature (not significant now; may be used later)
+ * 
  * @author Catherine Oldfield
  * from code originally written by W. Crosbie, RVCC GDEV242
  * @version 2020-10 v1.0
@@ -24,7 +26,7 @@ public class Elf extends Creature
      * requirements of elf minimum and maximum values
      * 
      * The instantiating class asks for an Elf and the Elf class is responsible for
-     * return an Elf object with values in the appropriate range
+     * returning an Elf object with values in the appropriate range
      * 
      */
     public Elf()
@@ -43,7 +45,7 @@ public class Elf extends Creature
     
     /**
      * Allows an Elf to determine how much damage it is causing in this round of battle
-     * An Elf has a 10% chance to do magic damage (2x damage)
+     * An Elf has a 10% chance to do magic damage (damage * 2)
      * @return  The value to be used to cause damage to another creature
      */
     public int attack()
@@ -51,7 +53,7 @@ public class Elf extends Creature
         int returnValue = super.attack();
         
         // compute the chance of doing magic damage (10% chance)
-        int magicDamage = Randomizer.nextInt(9);
+        int magicDamage = Randomizer.nextInt(10);
         if(magicDamage % 10 == 0)
         {
             returnValue = returnValue * 2;

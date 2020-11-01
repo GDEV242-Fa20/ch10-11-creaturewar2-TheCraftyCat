@@ -1,7 +1,11 @@
 
 /**
- * Write a description of class Balrog here.
- *
+ * The Balrog class implements a wrapper for the Demon class with the following additions
+ * Implements a maximum/minimum strength for the creature type [100/50]
+ * Implements a maximum/minimum hitpoint total for the creature type [200/80]
+ * 
+ * A Balrog is a demonic creature (not significant now; may be used later)
+ * 
  * @author Catherine Oldfield
  * from code originally written by W. Crosbie, RVCC GDEV242
  * @version 2020-10 v1.0
@@ -10,18 +14,18 @@
 public class Balrog extends Demon
 {
     // instance variables - replace the example below with your own
-    private static final int MAX_ELF_HP = 25;
-    private static final int MIN_ELF_HP = 8;
-    private static final int MAX_ELF_STR = 18;
-    private static final int MIN_ELF_STR = 5;
+    private static final int MAX_BALROG_HP = 200;
+    private static final int MIN_BALROG_HP = 80;
+    private static final int MAX_BALROG_STR = 100;
+    private static final int MIN_BALROG_STR = 50;
 
     /**
-     * Constructor for objects of class Elf -
+     * Constructor for objects of class Balrog -
      * Note that the calling class does not need to know anything about the 
      * requirements of elf minimum and maximum values
      * 
-     * The instantiating class asks for an Elf and the Elf class is responsible for
-     * return an Elf object with values in the appropriate range
+     * The instantiating class asks for a Balrog and the Balrog class is responsible for
+     * returning a Balrog object with values in the appropriate range
      * 
      */
     public Balrog()
@@ -32,48 +36,31 @@ public class Balrog extends Demon
         // max-min is range of values
         // range + min ensures that the values don't start at one.
         super(
-            Randomizer.nextInt(MAX_ELF_HP-MIN_ELF_HP)+MIN_ELF_HP,    
-            Randomizer.nextInt(MAX_ELF_STR-MIN_ELF_STR)+MIN_ELF_STR
+            Randomizer.nextInt(MAX_BALROG_HP-MIN_BALROG_HP)+MIN_BALROG_HP,    
+            Randomizer.nextInt(MAX_BALROG_STR-MIN_BALROG_STR)+MIN_BALROG_STR
         );
           
     }
     
-    
-    // attack() - not overridden because Humans generate basic damage
-    // takeDamage(int) - not overridden, because Humans take all damage assigned to them
-
-    
-}
-
-/**
- * Write a description of class Balrog here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
-public class Balrog
-{
-    // instance variables - replace the example below with your own
-    private int x;
-
     /**
-     * Constructor for objects of class Balrog
+     * Allows a Balrog to determine how much damage it is causing in this round of battle
+     * A Balrog always attacks twice (this is implemented with a local variable so that it
+     * can be changed later, if we decide a Balrog will attack more than twice)
+     * @return  The value to be used to cause damage to another creature
      */
-    public Balrog()
+    public int attack()
     {
-        // initialise instance variables
-        x = 0;
+        int totalAttack = 0;    // the total attack value of all the Balrog's attacks
+        int numAttacks = 2;     // the number of times the Balrog attacks
+        
+        for (int i = 0; i < numAttacks; i++)
+        {
+            totalAttack += super.attack();
+        }
+        
+        return totalAttack;
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
+    
+    // takeDamage(int) - not overridden, because a Balrog takes all damage assigned to it
+    
 }
