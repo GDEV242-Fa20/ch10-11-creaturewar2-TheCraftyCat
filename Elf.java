@@ -42,14 +42,24 @@ public class Elf extends Creature
     }
     
     /**
-     * 
+     * Allows an Elf to determine how much damage it is causing in this round of battle
+     * An Elf has a 10% chance to do magic damage (2x damage)
+     * @return  The value to be used to cause damage to another creature
      */
     public int attack()
     {
-        return 0;
+        int returnValue = super.attack();
+        
+        // compute the chance of doing magic damage (10% chance)
+        int magicDamage = Randomizer.nextInt(9);
+        if(magicDamage % 10 == 0)
+        {
+            returnValue = returnValue * 2;
+        }
+        
+        return returnValue;
     }
-    // attack() - not overridden because Humans generate basic damage
-    // takeDamage(int) - not overridden, because Humans take all damage assigned to them
-
+    
+    // takeDamage(int) - not overridden, because an Elf takes all damage assigned to it
     
 }
