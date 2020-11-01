@@ -2,8 +2,10 @@
 /**
  * Write a description of class Balrog here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Catherine Oldfield
+ * from code originally written by W. Crosbie, RVCC GDEV242
+ * @version 2020-10 v1.0
+ * @version 2020-11-01 C. Oldfield
  */
 public class Balrog extends Demon
 {

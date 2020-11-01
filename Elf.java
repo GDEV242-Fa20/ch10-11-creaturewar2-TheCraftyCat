@@ -5,8 +5,10 @@
  * Implements a maximum/minimum strength for the creature type [18/5]
  * Implements a maximum/minimum hitpoint total for the creature type [25/8]
  * 
- * @author Bill Crosbie
+ * @author Catherine Oldfield
+ * from code originally written by W. Crosbie, RVCC GDEV242
  * @version 2020-10 v1.0
+ * @version 2020-11-01 C. Oldfield
  */
 public class Elf extends Creature
 {
@@ -39,7 +41,13 @@ public class Elf extends Creature
           
     }
     
-    
+    /**
+     * 
+     */
+    public int attack()
+    {
+        return 0;
+    }
     // attack() - not overridden because Humans generate basic damage
     // takeDamage(int) - not overridden, because Humans take all damage assigned to them
 

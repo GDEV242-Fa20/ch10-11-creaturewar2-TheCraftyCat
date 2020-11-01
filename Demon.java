@@ -5,8 +5,10 @@
  * Implements a maximum/minimum strength for the creature type [20/5]
  * Implements a maximum/minimum hitpoint total for the creature type [25/5]
  * 
- * @author Bill Crosbie
+ * @author Catherine Oldfield
+ * from code originally written by W. Crosbie, RVCC GDEV242
  * @version 2020-10 v1.0
+ * @version 2020-11-01 C. Oldfield
  */
 public class Demon extends Creature
 {

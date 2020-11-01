@@ -7,8 +7,10 @@
  * the creature is alive or knocked out. The creature is also responsible for calculating
  * damage delivered based on the creature's strength (1 to str) 
  * 
- * @author Crosbie
+ * @author Catherine Oldfield
+ * from code originally written by W. Crosbie, RVCC GDEV242
  * @version 2020-10 v1.0
+ * @version 2020-11-01 C. Oldfield
  */
 // we will learn what the abstract keyword does in a later chapter
 public abstract class Creature
@@ -37,7 +39,8 @@ public abstract class Creature
      * @param hp the health of the creature at the start of the simulation, and the current health levels during battle
      */
     public Creature (int str, int hp) {
-       //implement this
+       this.str = str;
+       this.hp = hp;
     }
     
     
@@ -46,8 +49,8 @@ public abstract class Creature
      * @return a value between 1 and str to be used to cause damage to another creature
      */
     public int attack(){
-        // TODO: implement a damage method
-        return 0;
+        int returnValue = Randomizer.nextInt(str);
+        return returnValue;
     }
     
     
@@ -56,17 +59,30 @@ public abstract class Creature
      * @return true when current hit point level is greater than zero
      */
     public boolean isAlive() {
-        // TODO: implement a method to report if the creature yet lives
-        return false; //change this
+        if(hp > 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
+    
     
     /**
      * Is this creature knockedOut?
      * @return true when current hit point level is less than or equal to zero
      */
     public boolean isKnockedOut() {
-        //TODO: implement a method to report if the creature has been killed
-        return false; //change this
+        if(hp <= 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
     
     
@@ -76,7 +92,17 @@ public abstract class Creature
      * @param damage value to remove from hit point count
      */
     public void takeDamage(int damage) {
-        // TODO: implement this
+        hp -= damage;
     }
     
+    
+    /**
+     * getHealth returns the number of hit points the creature currently has
+     * @return hp  The current value of hit points
+     */
+    public int getHealth()
+    {
+        // placeholder
+        return hp;
+    }
 }
