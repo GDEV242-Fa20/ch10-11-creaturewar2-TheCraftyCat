@@ -8,7 +8,7 @@
  * A Demon is a demonic creature (not significant now; may be used later)
  * 
  * @author Catherine Oldfield
- * from code originally written by W. Crosbie, RVCC GDEV242
+ * from code originally written by W. Crosbie, RVCC GDEV242 Fall 2020
  * @version 2020-10 v1.0
  * @version 2020-11-01 C. Oldfield
  */
