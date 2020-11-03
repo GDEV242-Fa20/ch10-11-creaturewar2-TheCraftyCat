@@ -1,4 +1,4 @@
-//EDIT THIS!!!
+
 
 /**
  * The Demon class implements a wrapper for the base Creature class with the following additions

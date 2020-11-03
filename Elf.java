@@ -15,11 +15,11 @@
 public class Elf extends Creature
 {
     // instance variables - replace the example below with your own
-    private static final int MAX_ELF_HP = 25;
-    private static final int MIN_ELF_HP = 8;
     private static final int MAX_ELF_STR = 18;
     private static final int MIN_ELF_STR = 5;
-
+    private static final int MAX_ELF_HP = 25;
+    private static final int MIN_ELF_HP = 8;
+    
     /**
      * Constructor for objects of class Elf -
      * Note that the calling class does not need to know anything about the 
@@ -37,8 +37,8 @@ public class Elf extends Creature
         // max-min is range of values
         // range + min ensures that the values don't start at one.
         super(
-            Randomizer.nextInt(MAX_ELF_HP-MIN_ELF_HP)+MIN_ELF_HP,    
-            Randomizer.nextInt(MAX_ELF_STR-MIN_ELF_STR)+MIN_ELF_STR
+            Randomizer.nextInt(MAX_ELF_STR-MIN_ELF_STR)+MIN_ELF_STR,
+            Randomizer.nextInt(MAX_ELF_HP-MIN_ELF_HP)+MIN_ELF_HP
         );
           
     }
@@ -64,4 +64,43 @@ public class Elf extends Creature
     
     // takeDamage(int) - not overridden, because an Elf takes all damage assigned to it
     
+    /**
+     * getMinStr method returns the minimum strength value for the Elf class
+     * This method is primarily used for testing
+     * @return MIN_ELF_STR the minimum strength value
+     */
+    public int getMinStr()
+    {
+        return MIN_ELF_STR;
+    }
+    
+    /**
+     * getMaxStr method returns the maximum strength value for the Elf class
+     * This method is primarily used for testing
+     * @return MAX_ELF_STR the maximum strength value
+     */
+    public int getMaxStr()
+    {
+        return MAX_ELF_STR;
+    }
+    
+    /**
+     * getMinHP method returns the minimum hit point value for the Elf class
+     * This method is primarily used for testing
+     * @return MIN_ELF_HP the minimum HP value
+     */
+    public int getMinHP()
+    {
+        return MIN_ELF_HP;
+    }
+    
+    /**
+     * getMaxHP method returns the maximum hit point value for the Elf class
+     * This method is primarily used for testing
+     * @return MAX_ELF_HP the maximum HP value
+     */
+    public int getMaxHP()
+    {
+        return MAX_ELF_HP;
+    }
 }

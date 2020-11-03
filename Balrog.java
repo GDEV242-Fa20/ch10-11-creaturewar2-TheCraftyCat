@@ -14,10 +14,10 @@
 public class Balrog extends Demon
 {
     // instance variables - replace the example below with your own
-    private static final int MAX_BALROG_HP = 200;
-    private static final int MIN_BALROG_HP = 80;
     private static final int MAX_BALROG_STR = 100;
     private static final int MIN_BALROG_STR = 50;
+    private static final int MAX_BALROG_HP = 200;
+    private static final int MIN_BALROG_HP = 80;
 
     /**
      * Constructor for objects of class Balrog -
@@ -36,8 +36,8 @@ public class Balrog extends Demon
         // max-min is range of values
         // range + min ensures that the values don't start at one.
         super(
-            Randomizer.nextInt(MAX_BALROG_HP-MIN_BALROG_HP)+MIN_BALROG_HP,    
-            Randomizer.nextInt(MAX_BALROG_STR-MIN_BALROG_STR)+MIN_BALROG_STR
+            Randomizer.nextInt(MAX_BALROG_STR-MIN_BALROG_STR)+MIN_BALROG_STR,
+            Randomizer.nextInt(MAX_BALROG_HP-MIN_BALROG_HP)+MIN_BALROG_HP
         );
           
     }
@@ -63,4 +63,43 @@ public class Balrog extends Demon
     
     // takeDamage(int) - not overridden, because a Balrog takes all damage assigned to it
     
+    /**
+     * getMinStr method returns the minimum strength value for the Balrog class
+     * This method is primarily used for testing
+     * @return MIN_BALROG_STR the minimum strength value
+     */
+    public int getMinStr()
+    {
+        return MIN_BALROG_STR;
+    }
+    
+    /**
+     * getMaxStr method returns the maximum strength value for the Balrog class
+     * This method is primarily used for testing
+     * @return MAX_BALROG_STR the maximum strength value
+     */
+    public int getMaxStr()
+    {
+        return MAX_BALROG_STR;
+    }
+    
+    /**
+     * getMinHP method returns the minimum hit point value for the Balrog class
+     * This method is primarily used for testing
+     * @return MIN_BALROG_HP the minimum HP value
+     */
+    public int getMinHP()
+    {
+        return MIN_BALROG_HP;
+    }
+    
+    /**
+     * getMaxHP method returns the maximum hit point value for the Balrog class
+     * This method is primarily used for testing
+     * @return MAX_BALROG_HP the maximum HP value
+     */
+    public int getMaxHP()
+    {
+        return MAX_BALROG_HP;
+    }
 }

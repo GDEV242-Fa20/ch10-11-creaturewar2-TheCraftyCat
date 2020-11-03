@@ -14,11 +14,11 @@
 public class CyberDemon extends Demon
 {
     // instance variables - replace the example below with your own
-    private static final int MAX_CYBERDEMON_HP = 100;
-    private static final int MIN_CYBERDEMON_HP = 25;
     private static final int MAX_CYBERDEMON_STR = 40;
     private static final int MIN_CYBERDEMON_STR = 20;
-
+    private static final int MAX_CYBERDEMON_HP = 100;
+    private static final int MIN_CYBERDEMON_HP = 25;
+    
     /**
      * Constructor for objects of class CyberDemon -
      * Note that the calling class does not need to know anything about the 
@@ -36,8 +36,8 @@ public class CyberDemon extends Demon
         // max-min is range of values
         // range + min ensures that the values don't start at one.
         super(
-            Randomizer.nextInt(MAX_CYBERDEMON_HP-MIN_CYBERDEMON_HP)+MIN_CYBERDEMON_HP,    
-            Randomizer.nextInt(MAX_CYBERDEMON_STR-MIN_CYBERDEMON_STR)+MIN_CYBERDEMON_STR
+            Randomizer.nextInt(MAX_CYBERDEMON_STR-MIN_CYBERDEMON_STR)+MIN_CYBERDEMON_STR,    
+            Randomizer.nextInt(MAX_CYBERDEMON_HP-MIN_CYBERDEMON_HP)+MIN_CYBERDEMON_HP
         );
           
     }
@@ -45,4 +45,44 @@ public class CyberDemon extends Demon
     // attack() - not overridden because CyberDemons generate basic Demon damage
     
     // takeDamage(int) - not overridden, because a CyberDemon takes all damage assigned to it
+    
+    /**
+     * getMinStr method returns the minimum strength value for the CyberDemon class
+     * This method is primarily used for testing
+     * @return MIN_CYBERDEMON_STR the minimum strength value
+     */
+    public int getMinStr()
+    {
+        return MIN_CYBERDEMON_STR;
+    }
+    
+    /**
+     * getMaxStr method returns the maximum strength value for the CyberDemon class
+     * This method is primarily used for testing
+     * @return MAX_CYBERDEMON_STR the maximum strength value
+     */
+    public int getMaxStr()
+    {
+        return MAX_CYBERDEMON_STR;
+    }
+    
+    /**
+     * getMinHP method returns the minimum hit point value for the CyberDemon class
+     * This method is primarily used for testing
+     * @return MIN_CYBERDEMON_HP the minimum HP value
+     */
+    public int getMinHP()
+    {
+        return MIN_CYBERDEMON_HP;
+    }
+    
+    /**
+     * getMaxHP method returns the maximum hit point value for the CyberDemon class
+     * This method is primarily used for testing
+     * @return MAX_CYBERDEMON_HP the maximum HP value
+     */
+    public int getMaxHP()
+    {
+        return MAX_CYBERDEMON_HP;
+    }
 }

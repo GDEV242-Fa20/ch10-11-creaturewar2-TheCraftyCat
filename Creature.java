@@ -102,7 +102,15 @@ public abstract class Creature
      */
     public int getHealth()
     {
-        // placeholder
         return hp;
+    }
+    
+    /**
+     * getStrength returns the creature's strength value
+     * @return str  The current value of the creature's strength
+     */
+    public int getStrength()
+    {
+        return str;
     }
 }

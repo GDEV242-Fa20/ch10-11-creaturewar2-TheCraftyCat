@@ -15,11 +15,11 @@
 public class Gnome extends Creature
 {
     // instance variables - replace the example below with your own
-    private static final int MAX_GNOME_HP = 35;
-    private static final int MIN_GNOME_HP = 15;
     private static final int MAX_GNOME_STR = 12;
     private static final int MIN_GNOME_STR = 4;
-
+    private static final int MAX_GNOME_HP = 35;
+    private static final int MIN_GNOME_HP = 15;
+    
     /**
      * Constructor for objects of class Gnome -
      * Note that the calling class does not need to know anything about the 
@@ -37,12 +37,12 @@ public class Gnome extends Creature
         // max-min is range of values
         // range + min ensures that the values don't start at one.
         super(
-            Randomizer.nextInt(MAX_GNOME_HP-MIN_GNOME_HP)+MIN_GNOME_HP,    
-            Randomizer.nextInt(MAX_GNOME_STR-MIN_GNOME_STR)+MIN_GNOME_STR
+             Randomizer.nextInt(MAX_GNOME_STR-MIN_GNOME_STR)+MIN_GNOME_STR,
+             Randomizer.nextInt(MAX_GNOME_HP-MIN_GNOME_HP)+MIN_GNOME_HP
         );
           
     }
-    
+        
     /**
      * Allows a Gnome to determine how much damage it is causing in this round of battle
      * A Gnome has a 30% chance to panic and only do half damage
@@ -88,4 +88,43 @@ public class Gnome extends Creature
         }
     }
     
+    /**
+     * getMinStr method returns the minimum strength value for the Gnome class
+     * This method is primarily used for testing
+     * @return MIN_GNOME_STR the minimum strength value
+     */
+    public int getMinStr()
+    {
+        return MIN_GNOME_STR;
+    }
+    
+    /**
+     * getMaxStr method returns the maximum strength value for the Gnome class
+     * This method is primarily used for testing
+     * @return MAX_GNOME_STR the maximum strength value
+     */
+    public int getMaxStr()
+    {
+        return MAX_GNOME_STR;
+    }
+    
+    /**
+     * getMinHP method returns the minimum hit point value for the Gnome class
+     * This method is primarily used for testing
+     * @return MIN_GNOME_HP the minimum HP value
+     */
+    public int getMinHP()
+    {
+        return MIN_GNOME_HP;
+    }
+    
+    /**
+     * getMaxHP method returns the maximum hit point value for the Gnome class
+     * This method is primarily used for testing
+     * @return MAX_GNOME_HP the maximum HP value
+     */
+    public int getMaxHP()
+    {
+        return MAX_GNOME_HP;
+    }
 }

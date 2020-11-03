@@ -14,10 +14,10 @@
 public class Ooze extends Creature
 {
     // instance variables - replace the example below with your own
-    private static final int MAX_OOZE_HP = 25;
-    private static final int MIN_OOZE_HP = 5;
     private static final int MAX_OOZE_STR = 20;
     private static final int MIN_OOZE_STR = 5;
+    private static final int MAX_OOZE_HP = 25;
+    private static final int MIN_OOZE_HP = 5;
 
     /**
      * Constructor for objects of class Ooze
@@ -30,8 +30,8 @@ public class Ooze extends Creature
         // max-min is range of values
         // range + min ensures that the values don't start at one.
         super(
-            Randomizer.nextInt(MAX_OOZE_HP-MIN_OOZE_HP)+MIN_OOZE_HP,    
-            Randomizer.nextInt(MAX_OOZE_STR-MIN_OOZE_STR)+MIN_OOZE_STR
+            Randomizer.nextInt(MAX_OOZE_STR-MIN_OOZE_STR)+MIN_OOZE_STR,
+            Randomizer.nextInt(MAX_OOZE_HP-MIN_OOZE_HP)+MIN_OOZE_HP
         );
     }
 
@@ -56,4 +56,43 @@ public class Ooze extends Creature
     
     // attack() - not overridden because Oozes generate basic damage
     
+    /**
+     * getMinStr method returns the minimum strength value for the Ooze class
+     * This method is primarily used for testing
+     * @return MIN_OOZE_STR the minimum strength value
+     */
+    public int getMinStr()
+    {
+        return MIN_OOZE_STR;
+    }
+    
+    /**
+     * getMaxStr method returns the maximum strength value for the Ooze class
+     * This method is primarily used for testing
+     * @return MAX_OOZE_STR the maximum strength value
+     */
+    public int getMaxStr()
+    {
+        return MAX_OOZE_STR;
+    }
+    
+    /**
+     * getMinHP method returns the minimum hit point value for the Ooze class
+     * This method is primarily used for testing
+     * @return MIN_OOZE_HP the minimum HP value
+     */
+    public int getMinHP()
+    {
+        return MIN_OOZE_HP;
+    }
+    
+    /**
+     * getMaxHP method returns the maximum hit point value for the Ooze class
+     * This method is primarily used for testing
+     * @return MAX_OOZE_HP the maximum HP value
+     */
+    public int getMaxHP()
+    {
+        return MAX_OOZE_HP;
+    }
 }
