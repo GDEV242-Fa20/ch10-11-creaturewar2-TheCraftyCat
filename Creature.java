@@ -100,7 +100,7 @@ public abstract class Creature
      * getHealth returns the number of hit points the creature currently has
      * @return hp  The current value of hit points
      */
-    public int getHealth()
+    protected int getHealth()
     {
         return hp;
     }
@@ -109,7 +109,7 @@ public abstract class Creature
      * getStrength returns the creature's strength value
      * @return str  The current value of the creature's strength
      */
-    public int getStrength()
+    protected int getStrength()
     {
         return str;
     }
