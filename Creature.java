@@ -10,7 +10,7 @@
  * @author Catherine Oldfield
  * from code originally written by W. Crosbie, RVCC GDEV242 Fall 2020
  * @version 2020-10 v1.0
- * @version 2020-11-01 C. Oldfield
+ * @version 2020-11-04 C. Oldfield
  */
 // we will learn what the abstract keyword does in a later chapter
 public abstract class Creature
