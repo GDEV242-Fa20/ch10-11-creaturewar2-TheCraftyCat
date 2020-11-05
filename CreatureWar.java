@@ -21,7 +21,7 @@ public class CreatureWar
         goodArmy = new ArrayList<Creature>();
         evilArmy = new ArrayList<Creature>();
         createGoodArmy();
-        //createEvilArmy();
+        createEvilArmy();
     }
 
     /**
@@ -107,5 +107,25 @@ public class CreatureWar
             // increment the index
             index++;
         }
+    }
+    
+    /**
+     * Returns the size of the goodArmy ArrayList.
+     * This method is used for testing.
+     * @return The size of the goodArmy ArrayList.
+     */
+    public int getGoodArmySize()
+    {
+        return goodArmy.size();
+    }
+    
+    /**
+     * Returns the size of the evilArmy ArrayList.
+     * This method is used for testing.
+     * @return The size of the evilArmy ArrayList.
+     */
+    public int getEvilArmySize()
+    {
+        return evilArmy.size();
     }
 }
