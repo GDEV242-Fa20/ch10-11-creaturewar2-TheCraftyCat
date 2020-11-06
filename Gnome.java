@@ -2,23 +2,23 @@
 
 /**
  * The Gnome class implements a wrapper for the base Creature class with the following additions
- * Implements a maximum/minimum strength for the creature type [12/4]
- * Implements a maximum/minimum hitpoint total for the creature type [35/15]
+ * Implements a maximum/minimum strength for the creature type [8/4]
+ * Implements a maximum/minimum hitpoint total for the creature type [15/5]
  * 
  * A Gnome is a magical creature (not significant now; may be used later)
  * 
  * @author Catherine Oldfield
  * from code originally written by W. Crosbie, RVCC GDEV242 Fall 2020
  * @version 2020-10 v1.0
- * @version 2020-11-04 C. Oldfield
+ * @version 2020-11-05 C. Oldfield
  */
 public class Gnome extends Creature
 {
     // instance variables - replace the example below with your own
-    private static final int MAX_GNOME_STR = 12;
+    private static final int MAX_GNOME_STR = 8;
     private static final int MIN_GNOME_STR = 4;
-    private static final int MAX_GNOME_HP = 35;
-    private static final int MIN_GNOME_HP = 15;
+    private static final int MAX_GNOME_HP = 15;
+    private static final int MIN_GNOME_HP = 5;
     
     /**
      * Constructor for objects of class Gnome -

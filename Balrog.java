@@ -9,7 +9,7 @@
  * @author Catherine Oldfield
  * from code originally written by W. Crosbie, RVCC GDEV242 Fall 2020
  * @version 2020-10 v1.0
- * @version 2020-11-04 C. Oldfield
+ * @version 2020-11-05 C. Oldfield
  */
 public class Balrog extends Demon
 {
