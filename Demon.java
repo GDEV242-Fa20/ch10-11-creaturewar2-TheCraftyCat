@@ -1,5 +1,4 @@
 
-
 /**
  * The Demon class implements a wrapper for the base Creature class with the following additions
  * Implements a maximum/minimum strength for the creature type [20/5]
@@ -10,7 +9,7 @@
  * @author Catherine Oldfield
  * from code originally written by W. Crosbie, RVCC GDEV242 Fall 2020
  * @version 2020-10 v1.0
- * @version 2020-11-05 C. Oldfield
+ * @version 2020-11-06 C. Oldfield
  */
 public class Demon extends Creature
 {
@@ -55,4 +54,12 @@ public class Demon extends Creature
     
     // takeDamage(int) - not overridden, because a Demon takes all damage assigned to it
     
+    /**
+     * The toString method returns a string representation of the Demon
+     * @return  A string representation of the Demon
+     */
+    public String toString()
+    {
+        return "Demon";
+    }
 }

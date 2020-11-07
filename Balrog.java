@@ -9,7 +9,7 @@
  * @author Catherine Oldfield
  * from code originally written by W. Crosbie, RVCC GDEV242 Fall 2020
  * @version 2020-10 v1.0
- * @version 2020-11-05 C. Oldfield
+ * @version 2020-11-06 C. Oldfield
  */
 public class Balrog extends Demon
 {
@@ -101,5 +101,14 @@ public class Balrog extends Demon
     public int getMaxHP()
     {
         return MAX_BALROG_HP;
+    }
+    
+    /**
+     * The toString method returns a string representation of the Balrog
+     * @return  A string representation of the Balrog
+     */
+    public String toString()
+    {
+        return "Balrog";
     }
 }

@@ -9,7 +9,7 @@
  * @author Catherine Oldfield
  * from code originally written by W. Crosbie, RVCC GDEV242 Fall 2020
  * @version 2020-10 v1.0
- * @version 2020-11-05 C. Oldfield
+ * @version 2020-11-06 C. Oldfield
  */
 public class CyberDemon extends Demon
 {
@@ -84,5 +84,14 @@ public class CyberDemon extends Demon
     public int getMaxHP()
     {
         return MAX_CYBERDEMON_HP;
+    }
+    
+    /**
+     * The toString method returns a string representation of the CyberDemon
+     * @return  A string representation of the CyberDemon
+     */
+    public String toString()
+    {
+        return "Cyber Demon";
     }
 }

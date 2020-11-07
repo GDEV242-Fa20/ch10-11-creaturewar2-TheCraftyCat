@@ -1,5 +1,4 @@
 
-
 /**
  * The Human class implements a wrapper for the base Creature class with the following additions
  * Implements a maximum/minimum strength for the creature type [20/5] 
@@ -12,7 +11,7 @@
  * @author Catherine Oldfield
  * from code originally written by W. Crosbie, RVCC GDEV242 Fall 2020
  * @version 2020-10 v1.0
- * @version 2020-11-05 C. Oldfield
+ * @version 2020-11-06 C. Oldfield
  */
 public class Human extends Creature
 {
@@ -87,5 +86,14 @@ public class Human extends Creature
     public int getMaxHP()
     {
         return MAX_HUMAN_HP;
+    }
+    
+    /**
+     * The toString method returns a string representation of the Human
+     * @return  A string representation of the Human
+     */
+    public String toString()
+    {
+        return "Human";
     }
 }

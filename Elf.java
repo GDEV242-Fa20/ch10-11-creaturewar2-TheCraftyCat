@@ -1,5 +1,4 @@
 
-
 /**
  * The Elf class implements a wrapper for the base Creature class with the following additions
  * Implements a maximum/minimum strength for the creature type [18/5]
@@ -10,7 +9,7 @@
  * @author Catherine Oldfield
  * from code originally written by W. Crosbie, RVCC GDEV242 Fall 2020
  * @version 2020-10 v1.0
- * @version 2020-11-05 C. Oldfield
+ * @version 2020-11-06 C. Oldfield
  */
 public class Elf extends Creature
 {
@@ -102,5 +101,14 @@ public class Elf extends Creature
     public int getMaxHP()
     {
         return MAX_ELF_HP;
+    }
+    
+    /**
+     * The toString method returns a string representation of the Elf
+     * @return  A string representation of the Elf
+     */
+    public String toString()
+    {
+        return "Elf";
     }
 }
